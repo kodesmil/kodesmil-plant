@@ -6,13 +6,13 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
-actor customer
-actor clerk
-rectangle checkout {
-  customer -- (checkout)
-  (checkout) .> (payment) : include
-  (help) .> (checkout) : extends
-  (checkout) -- clerk
+actor Customer
+actor Ytt Provider
+rectangle System {
+  Customer -- (System)
+  (Order Ytt) .> (Payment) : include
+  (Help) .> (Order Ytt) : extends
+  (Order Ytt) -- Ytt Provider
 }
 @enduml
 ```
@@ -20,19 +20,98 @@ rectangle checkout {
 
 ## Class diagrams
 
-```plantuml:ytt-classes
+### Ytt Service
+
+```plantuml:ytt-service-classes
 @startuml
-actor Foo1
-boundary Foo2
-control Foo3
-entity Foo4
-database Foo5
-collections Foo6
-Foo1 -> Foo2 : To boundary
-Foo1 -> Foo3 : To control
-Foo1 -> Foo4 : To entity
-Foo1 -> Foo5 : To database
-Foo1 -> Foo6 : To collections
+
+class Error {
+  code: Int
+  message: String
+}
+
+class ServiceCategory {
+  id: Uuid
+  name: String
+}
+
+class ServiceProvider {
+  id: Uuid
+  name: String 
+  owner: User
+  location: Location
+}
+
+class Service {
+  id: Uuid
+  name: String
+  description: String
+  category: ServiceCategory
+  provider: ServiceProvider
+  picture: Url
+  location: Location
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class ServiceSlot {
+  id: Uuid
+  duration: Int
+  service: Service
+  startingAt: DateTime
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class ServiceBooking {
+  id: Uuid
+  customer: User
+  slot: ServiceSlot
+  createdAt: DateTime
+  updatedAt: DateTime
+  confirmedAt: DateTime
+}
+
+class ServiceBookingReview {
+  id: Uuid
+  booking: ServiceBooking
+  text: String
+  rate: Rates
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
 @enduml
 ```
-![](ytt-classes.svg)
+![](ytt-service-classes.svg)
+
+### Chat Service
+
+```plantuml:ytt-chat-classes
+@startuml
+
+class ChatRoom {
+  id: Uuid
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class ChatRoomParticipant {
+  id: Uuid
+  user: User
+  role: Roles
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class ChatRoomMessage {
+  id: Uuid
+  author: ChatRoomParticipant
+  createdAt: DateTime
+  updatedAt: DateTime
+  text: String
+}
+
+@enduml
+```
+![](ytt-chat-classes.svg)
