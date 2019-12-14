@@ -2,7 +2,7 @@
 
 ## Use case diagrams
 
-```plantuml:ytt-cases
+```plantuml:diagrams/ytt-cases
 @startuml
 actor Foo1
 boundary Foo2
@@ -21,7 +21,7 @@ Foo1 -> Foo6 : To collections
 
 ## Class diagrams
 
-```plantuml:ytt-classes
+```plantuml:diagrams/ytt-classes
 @startuml
 actor Foo1
 boundary Foo2
