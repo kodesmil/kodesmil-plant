@@ -2,7 +2,7 @@
 
 ## Use case diagrams
 
-```plantuml:./diagrams/ytt-cases
+```plantuml:ytt-cases
 @startuml
 left to right direction
 skinparam packageStyle rectangle
@@ -16,11 +16,11 @@ rectangle checkout {
 }
 @enduml
 ```
-![](./diagrams/ytt-cases.svg)
+![](./ytt-cases.svg)
 
 ## Class diagrams
 
-```plantuml:./diagrams/ytt-classes
+```plantuml:./ytt-classes
 @startuml
 actor Foo1
 boundary Foo2
@@ -35,4 +35,4 @@ Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
 @enduml
 ```
-![](./diagrams/ytt-classes.svg)
+![](./ytt-classes.svg)
