@@ -16,11 +16,11 @@ rectangle checkout {
 }
 @enduml
 ```
-![](./ytt-cases.svg)
+![](ytt-cases.svg)
 
 ## Class diagrams
 
-```plantuml:./ytt-classes
+```plantuml:ytt-classes
 @startuml
 actor Foo1
 boundary Foo2
@@ -35,4 +35,4 @@ Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
 @enduml
 ```
-![](./ytt-classes.svg)
+![](ytt-classes.svg)
