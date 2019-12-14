@@ -17,7 +17,7 @@ Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
 @enduml
 ```
-![](./diagrams/ytt-classes.svg)
+![](./diagrams/ytt-cases.svg)
 
 ## Class diagrams
 
@@ -36,4 +36,4 @@ Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
 @enduml
 ```
-![](./diagrams/ytt.no-classes.svg)
+![](./diagrams/ytt-classes.svg)
