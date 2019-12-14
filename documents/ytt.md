@@ -2,26 +2,25 @@
 
 ## Use case diagrams
 
-```plantuml:diagrams/ytt-cases
+```plantuml:./diagrams/ytt-cases
 @startuml
-actor Foo1
-boundary Foo2
-control Foo3
-entity Foo4
-database Foo5
-collections Foo6
-Foo1 -> Foo2 : To boundary
-Foo1 -> Foo3 : To control
-Foo1 -> Foo4 : To entity
-Foo1 -> Foo5 : To database
-Foo1 -> Foo6 : To collections
+left to right direction
+skinparam packageStyle rectangle
+actor customer
+actor clerk
+rectangle checkout {
+  customer -- (checkout)
+  (checkout) .> (payment) : include
+  (help) .> (checkout) : extends
+  (checkout) -- clerk
+}
 @enduml
 ```
 ![](./diagrams/ytt-cases.svg)
 
 ## Class diagrams
 
-```plantuml:diagrams/ytt-classes
+```plantuml:./diagrams/ytt-classes
 @startuml
 actor Foo1
 boundary Foo2
