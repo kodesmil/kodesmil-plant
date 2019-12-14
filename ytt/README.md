@@ -26,75 +26,75 @@ rectangle System {
 @startuml
 
 class Error {
-  + code: Int
-  + message: String
+  code: Int
+  message: String
 }
 
 class User {
-  + id: Uuid
-  + firstName: String
-  + lastName: String
-  + email: String
-  + passwordHash: String
+  id: Uuid
+  firstName: String
+  lastName: String
+  email: String
+  passwordHash: String
 }
 
 class ServiceCategory {
-  + id: Uuid
-  + name: String
+  id: Uuid
+  name: String
 }
 
 class ServiceProvider {
-  + id: Uuid
-  + name: String 
-  + owner: User
-  + location: Location
+  id: Uuid
+  name: String 
+  owner: User
+  location: Location
 }
 
 class Service {
-  + id: Uuid
-  + name: String
-  + description: String
-  + categories: ServiceCategory[]
-  + provider: ServiceProvider
-  + picture: Url
-  + location: Location
-  + createdAt: DateTime
-  + updatedAt: DateTime
+  id: Uuid
+  name: String
+  description: String
+  categories: ServiceCategory[]
+  provider: ServiceProvider
+  picture: Url
+  location: Location
+  createdAt: DateTime
+  updatedAt: DateTime
 }
 
 Service o--* ServiceCategory : included in
 Service |-- ServiceProvider : provided by
 
 class ServiceSlot {
-  + id: Uuid
-  + duration: Int
-  + service: Service
-  + startingAt: DateTime
-  + createdAt: DateTime
-  + updatedAt: DateTime
+  id: Uuid
+  duration: Int
+  service: Service
+  startingAt: DateTime
+  createdAt: DateTime
+  updatedAt: DateTime
 }
 
 ServiceSlot |-- Service : defined by
 
 class ServiceBooking {
-  + id: Uuid
-  + customer: User
-  + slot: ServiceSlot
-  + createdAt: DateTime
-  + updatedAt: DateTime
-  + confirmedAt: DateTime
+  id: Uuid
+  customer: User
+  slot: ServiceSlot
+  createdAt: DateTime
+  updatedAt: DateTime
+  confirmedAt: DateTime
 }
 
 ServiceBooking |-- ServiceSlot : booked for
 ServiceBooking o-- User : booked by
 
 class ServiceBookingReview {
-  + id: Uuid
-  + booking: ServiceBooking
-  + text: String
-  + rate: Rates
-  + createdAt: DateTime
-  + updatedAt: DateTime
+  id: Uuid
+  booking: ServiceBooking
+  text: String
+  rate: Rates
+  createdAt: DateTime
+  updatedAt: DateTime
 }
 
 
@@ -108,25 +108,25 @@ class ServiceBookingReview {
 @startuml
 
 class ChatRoom {
-  + id: Uuid
-  + createdAt: DateTime
-  + updatedAt: DateTime
+  id: Uuid
+  createdAt: DateTime
+  updatedAt: DateTime
 }
 
 class ChatRoomParticipant {
-  + id: Uuid
-  + user: User
-  + role: Roles
-  + createdAt: DateTime
-  + updatedAt: DateTime
+  id: Uuid
+  user: User
+  role: Roles
+  createdAt: DateTime
+  updatedAt: DateTime
 }
 
 class ChatRoomMessage {
-  + id: Uuid
-  + author: ChatRoomParticipant
-  + createdAt: DateTime
-  + updatedAt: DateTime
-  + text: String
+  id: Uuid
+  author: ChatRoomParticipant
+  createdAt: DateTime
+  updatedAt: DateTime
+  text: String
 }
 
 @enduml
