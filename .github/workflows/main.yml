@@ -9,10 +9,17 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 20
-    - name: plantuml
-      id: plantuml
+    - name: plantuml-kodesmil
+      id: plantuml-kodesmil
       uses: grassedge/generate-plantuml-action@v1.0
       with:
-        path: documents
+        path: documents/kodesmil
+      env:
+        GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+    - name: plantuml-ytt
+      id: plantuml-ytt
+      uses: grassedge/generate-plantuml-action@v1.0
+      with:
+        path: documents/ytt
       env:
         GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
