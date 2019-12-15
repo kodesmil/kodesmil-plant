@@ -1,0 +1,35 @@
+@startuml Ytt Chat Classes Diagram
+
+class ChatRoom {
+  id: Uuid
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+enum ChatRoles {
+  Admin
+  User
+}
+
+class ChatRoomParticipation {
+  id: Uuid
+  userId: Uuid
+  role: ChatRoles
+  room: ChatRoom
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+class ChatRoomMessage {
+  id: Uuid
+  text: String
+  authorId: Uuid
+  room: ChatRoom
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+ChatRoom <|-- ChatRoomParticipation : participated by
+ChatRoom <|-- ChatRoomMessage : written in
+
+@enduml

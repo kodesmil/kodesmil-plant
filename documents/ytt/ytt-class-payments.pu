@@ -1,0 +1,13 @@
+@startuml Payments Class Diagram
+
+class Payment {
+  id: Uuid
+  stripePaymentId: Uuid
+}
+
+class Customer {
+  id: Uuid
+  stripeCustomerId: Uuid
+}
+
+@enduml

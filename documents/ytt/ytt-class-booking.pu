@@ -1,0 +1,23 @@
+@startuml Booking Class Diagram
+
+class ServiceBooking {
+  id: Uuid
+  customerId: Uuid
+  serviceSlotId: Uuid
+  createdAt: DateTime
+  updatedAt: DateTime
+  confirmedAt: DateTime
+}
+
+class ServiceBookingReview {
+  id: Uuid
+  text: String
+  rate: Int
+  booking: ServiceBooking
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+ServiceBooking <|-- ServiceBookingReview
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml Ytt User Classes Diagram
+
+class User {
+  id: Uuid
+  firstName: String
+  lastName: String
+  email: String
+  passwordHash: String
+}
+
+@enduml

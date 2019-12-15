@@ -1,18 +1,5 @@
 @startuml Services Class Diagram
 
-class Error {
-  code: Int
-  message: String
-}
-
-class User {
-  id: Uuid
-  firstName: String
-  lastName: String
-  email: String
-  passwordHash: String
-}
-
 class ServiceCategory {
   id: Uuid
   name: String
@@ -21,7 +8,7 @@ class ServiceCategory {
 class ServiceProvider {
   id: Uuid
   name: String
-  owner: User
+  ownerId: Uuid
   location: Location
 }
 
@@ -50,27 +37,5 @@ class ServiceSlot {
 }
 
 ServiceSlot <|-- Service : defined by
-
-class ServiceBooking {
-  id: Uuid
-  customer: User
-  slot: ServiceSlot
-  createdAt: DateTime
-  updatedAt: DateTime
-  confirmedAt: DateTime
-}
-
-ServiceBooking <|-- ServiceSlot : booked for
-ServiceBooking o-- User : booked by
-
-class ServiceBookingReview {
-  id: Uuid
-  booking: ServiceBooking
-  text: String
-  rate: Rates
-  createdAt: DateTime
-  updatedAt: DateTime
-}
-
 
 @enduml

@@ -1,0 +1,8 @@
+@startuml Ytt Generic Classes Diagram
+
+class Error {
+  code: Int
+  message: String
+}
+
+@enduml

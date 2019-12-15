@@ -1,15 +1,45 @@
 # Ytt
 
-## Use case diagrams
+## Authentication (Auth0)
 
-![](ytt-cases.svg)
+### Classes
 
-## Class diagrams
+![](ytt-class-user.svg)
 
-### Ytt Service
+## Content Serving
 
-![](ytt-service-classes.svg)
+### Use Cases
 
-### Chat Service
+![](ytt-case-content.svg)
 
-![](ytt-chat-classes.svg)
+### Classes
+
+![](ytt-class-content.svg)
+
+## Booking 
+
+### Use Cases
+
+![](ytt-case-booking.svg)
+
+### Classes
+
+![](ytt-class-booking.svg)
+
+## Payments
+
+### Classes
+
+![](ytt-class-payments.svg)
+
+## Chat
+
+### Classes
+
+![](ytt-class-chat.svg)
+
+## Error Handling
+
+### Classes
+
+![](ytt-class-error-handling.svg)
