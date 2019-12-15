@@ -4,5 +4,5 @@ class Error {
   code: Int
   message: String
 }
-
+ 
 @enduml

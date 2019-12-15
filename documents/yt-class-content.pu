@@ -23,7 +23,7 @@ class Service {
   createdAt: DateTime
   updatedAt: DateTime
 }
-
+ 
 Service o--* ServiceCategory : included in
 Service <|-- ServiceProvider : provided by
 

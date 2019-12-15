@@ -31,5 +31,5 @@ class ChatRoomMessage {
 
 ChatRoom <|-- ChatRoomParticipation : participated by
 ChatRoom <|-- ChatRoomMessage : written in
-
+ 
 @enduml
