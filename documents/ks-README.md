@@ -2,7 +2,7 @@
 
 ## Technology Guideline
 
-![](mind-technology.svg)
+![](ks-mind-technology.svg)
 
 ### Manifests
 - https://reactivemanifesto.org/
@@ -11,8 +11,8 @@
 
 ## Marketing
 
-![](mind-marketing.svg)
+![](ks-mind-marketing.svg)
 
 ## Products
 
-![](mind-products.svg)
+![](ks-mind-products.svg)

@@ -4,42 +4,42 @@
 
 ### Classes
 
-![](class-user.svg)
+![](yt-class-user.svg)
 
 ## Content Serving
 
 ### Use Cases
 
-![](case-content.svg)
+![](yt-case-content.svg)
 
 ### Classes
 
-![](class-content.svg)
+![](yt-class-content.svg)
 
 ## Booking 
 
 ### Use Cases
 
-![](case-booking.svg)
+![](yt-case-booking.svg)
 
 ### Classes
 
-![](class-booking.svg)
+![](yt-class-booking.svg)
 
 ## Payments
 
 ### Classes
 
-![](class-payments.svg)
+![](yt-class-payments.svg)
 
 ## Chat
 
 ### Classes
 
-![](class-chat.svg)
+![](yt-class-chat.svg)
 
 ## Error Handling
 
 ### Classes
 
-![](class-error-handling.svg)
+![](yt-class-error-handling.svg)
