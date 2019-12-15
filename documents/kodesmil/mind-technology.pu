@@ -1,0 +1,17 @@
+@startmindmap Technology
+* Technology
+** Vision
+*** Have fun with technology
+*** Technology as hobby
+** Software
+*** Backend
+**** Flask (at early stage)
+**** Go / GoMicro
+**** gRPC
+*** Frontend
+**** Vue
+**** BitDev
+**** Monorepo
+*** Mobile
+**** Flutter
+@endmindmap
