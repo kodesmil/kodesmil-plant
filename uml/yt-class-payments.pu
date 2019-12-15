@@ -1,0 +1,20 @@
+@startuml Checkout Class Diagram
+
+class CheckoutPayment {
+  id: Uuid
+  stripePaymentId: Uuid
+}
+
+class CheckoutCustomer {
+  id: Uuid
+  stripeCustomerId: Uuid
+  userId: Uuid
+}
+
+class CheckoutOrder {
+  id: Uuid
+  productId: Uuid
+  payment: CheckoutPayment
+}
+
+@enduml
