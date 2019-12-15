@@ -13,6 +13,6 @@ jobs:
       id: plantuml
       uses: grassedge/generate-plantuml-action@v1.0
       with:
-        path: documents/ytt
+        path: documents
       env:
         GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
