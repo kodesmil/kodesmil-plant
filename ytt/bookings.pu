@@ -1,4 +1,21 @@
-@startuml Booking Class Diagram
+@startuml UseCases
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor Customer
+actor YttProvider
+
+rectangle System {
+  Customer -- (Order Ytt)
+  (Order Ytt) .> (Payment) : include
+  (Help) .> (Order Ytt) : extends
+  (Order Ytt) -- YttProvider
+}
+
+@enduml
+
+@startuml Classes
 
 class ServiceBooking {
   id: Uuid

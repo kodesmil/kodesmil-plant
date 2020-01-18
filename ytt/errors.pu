@@ -1,4 +1,4 @@
-@startuml Ytt Generic Classes Diagram
+@startuml Classes
 
 class Error {
   code: Int

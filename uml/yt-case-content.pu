@@ -1,9 +1,0 @@
-@startuml Content Service Use Cases
-
-actor User
-
-User -- (See Categories)
-User -- (See List of Services)
-User -- (See Service Details)
- 
-@enduml

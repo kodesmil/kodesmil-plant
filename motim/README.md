@@ -2,10 +2,10 @@
 
 ## Activities
 
-![](../out/motim/activities/MotimActivities Sequence.png)
+![](../out/motim/activities/MotimActivitiesSequence.png)
 
-![](../out/motim/activities/MotimActivities Entities.png)
+![](../out/motim/activities/MotimActivitiesEntities.png)
 
 ## Points
 
-![](../out/motim/points/MotimPoints Entities.png)
+![](../out/motim/points/MotimPointsEntities.png)

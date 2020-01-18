@@ -1,4 +1,14 @@
-@startuml Services Class Diagram
+@startuml UseCases
+
+actor User
+
+User -- (See Categories)
+User -- (See List of Services)
+User -- (See Service Details)
+ 
+@enduml
+
+@startuml Classes
 
 class ServiceCategory {
   id: Uuid

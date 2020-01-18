@@ -1,4 +1,4 @@
-@startuml MotimActivities Sequence
+@startuml MotimActivitiesSequence
 
 actor User
 database MotimActivities

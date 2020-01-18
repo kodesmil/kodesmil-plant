@@ -1,4 +1,4 @@
-@startuml Checkout Class Diagram
+@startuml Classes
 
 class CheckoutPayment {
   id: Uuid

@@ -1,4 +1,4 @@
-@startuml MotimPoints Entities
+@startuml MotimPointsEntities
 
 entity "ActivityPoints" as e01 {
   * id : uuid <<generated>>

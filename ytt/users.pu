@@ -1,4 +1,4 @@
-@startuml Ytt User Classes Diagram
+@startuml Classes
 
 class User {
   id: Uuid

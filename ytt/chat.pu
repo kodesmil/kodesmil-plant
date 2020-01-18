@@ -1,4 +1,4 @@
-@startuml Ytt Chat Classes Diagram
+@startuml Classes
 
 class ChatRoom {
   id: Uuid
