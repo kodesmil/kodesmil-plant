@@ -1,26 +1,26 @@
-@startuml MF Activity Sequence
+@startuml MotimActivities Sequence
 
 actor User
-database MotimActivity
+database MotimActivities
 database MotimPoints
 database MotimUsers
 
-User -> MotimActivity : Send raw activity data
-MotimActivity -> MotimUsers : Authorize user
-MotimUsers -> MotimActivity : 200 Authorized
-MotimActivity -> MotimActivity : Save raw data
-User <- MotimActivity : 201 Created
-MotimActivity -> MotimPoints : Ping that user has new pointsa
+User -> MotimActivities : Send raw activity data
+MotimActivities -> MotimUsers : Authorize user
+MotimUsers -> MotimActivities : 200 Authorized
+MotimActivities -> MotimActivities : Save raw data
+User <- MotimActivities : 201 Created
+MotimActivities -> MotimPoints : Ping that user has new pointsa
 MotimPoints -> MotimUsers : Authorize user
 MotimUsers -> MotimPoints : 200 Authorized
-MotimPoints -> MotimActivity: Ask for actvity data
-MotimActivity -> MotimPoints: 200 Return activity data
+MotimPoints -> MotimActivities: Ask for actvity data
+MotimActivities -> MotimPoints: 200 Return activity data
 MotimPoints -> MotimPoints: Recalculate user points
 MotimPoints -> User: 200 Send new points
 
 @enduml
 
-@startuml MF Activity Entities
+@startuml MotimActivities Entities
 
 entity "Activities" as e01 {
   * id : uuid <<generated>>
